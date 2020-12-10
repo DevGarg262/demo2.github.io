@@ -21,10 +21,10 @@
  jQuery(function($) {
   var container = document.getElementById("build-wrap");
   var options = {
-    disabledFieldButtons: {
-      text: ['edit'],
-      number: ['edit']
-    },
+    // disabledFieldButtons: {
+    //    text: ['edit'],
+    //   number: ['edit']
+    // },
     defaultFields: [
       {
         className: "form-control",
@@ -42,14 +42,23 @@
       },
       {
         className: "form-control",
+        label: "Emai_id",
+        placeholder: "Enter your email id",
+        name: "email_id",
+        type: "text",
+      },
+      {
+        className: "form-control",
         label: "Mobile No.",
         placeholder: "Enter your Mobile No.",
         name: "mob_no",
         type: "number",
       },
       
-    ]
+    ],
 
+    disabledAttrs: ["name","access","maxlength","className","description","max","min","step"]
+    
     
   };
   $(container).formBuilder(options);
