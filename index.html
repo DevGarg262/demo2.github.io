@@ -15,6 +15,7 @@
 <body>
     <div id="build-wrap"></div>
 <div class="render-wrap"></div>
+<!-- <button id="edit-form">Edit Form</button> -->
 
 <script>
  jQuery(function($) {
@@ -25,38 +26,77 @@
     //   number: ['edit']
     // },
     defaultFields: [
+  {
+    "type": "header",
+    "label": "UPDA Conclave 2020 - Become a Partner"
+  },
+  {
+    "type": "text",
+    "required": true,
+    "label": "Email address",
+    "placeholder": "Your answer",
+    "className": "form-control",
+    "name": "email_id"
+  },
+  {
+    "type": "radio-group",
+    "required": true,
+    "label": "Interested in becoming",
+    "inline": false,
+    "name": "radio-group-1607714911230",
+    "other": false,
+    "values": [
       {
-        className: "form-control",
-        label: "first_name",
-        placeholder: "Enter your first name",
-        name: "first_name",
-        type: "text",
+        "label": "Gold Sponsor",
+        "value": "Gold Sponsor",
+        "selected": false
       },
       {
-        className: "form-control",
-        label: "last_name",
-        placeholder: "Enter your last name",
-        name: "last_name",
-        type: "text",
+        "label": "Silver Sponsor",
+        "value": "Silver Sponsor",
+        "selected": false
       },
       {
-        className: "form-control",
-        label: "Emai_id",
-        placeholder: "Enter your email id",
-        name: "email_id",
-        type: "text",
-      },
-      {
-        className: "form-control",
-        label: "Mobile No.",
-        placeholder: "Enter your Mobile No.",
-        name: "mob_no",
-        type: "number",
-      },
-      
-    ],
+        "label": "Associate Sponsor",
+        "value": "Associate Sponsor",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "required": true,
+    "label": "Name",
+    "placeholder": "Your answer",
+    "className": "form-control",
+    "name": "first_name"
+  },
+  {
+    "type": "number",
+    "required": true,
+    "label": "Phone Number",
+    "placeholder": "Your answer",
+    "className": "form-control",
+    "name": "mob_no"
+  },
+  {
+    "type": "text",
+    "required": true,
+    "label": "Company name",
+    "placeholder": "Your answer",
+    "className": "form-control",
+    "name": "last_name"
+  },
+  {
+    "type": "button",
+    "label": "Submit",
+    "className": "btn-default btn",
+    "name": "button-1607714677442",
+    "style": "default"
+  }
+],
 
-    disabledAttrs: ["name","access","maxlength","className","description","max","min","step","subtype"]
+    disabledAttrs: ["name","access","maxlength","className","description","max","min","subtype"]
     
     
   };
