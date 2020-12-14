@@ -31,7 +31,8 @@
 jQuery(function($) {
   var fbEditor = document.getElementById('build-wrap');
   var options = {
-    controlPosition: 'left'
+    controlPosition: 'left',
+      disabledAttrs: ["name","access","maxlength","className","description","max","min","subtype"]
   };
   var formBuilder = $(fbEditor).formBuilder(options);
 
