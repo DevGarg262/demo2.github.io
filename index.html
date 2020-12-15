@@ -15,49 +15,64 @@
  
 </head>
 <body>
-  <!-- <div class="buttons"> -->
-  <div class="addFieldWrap" style="display: inline-grid; width: 350px;">
-    <button id="appendField" class="addFieldBtn btn btn-outline-secondary" data-type="text" data-label="first_name" type="button">First Name</button>
-    <button id="appendField" class="addFieldBtn btn btn-outline-secondary" data-type="text" data-label="last_name" type="button">Last Name</button>
-    <button id="appendField" class="addFieldBtn btn btn-outline-secondary" data-type="text" data-label="Company" type="button">Company</button>
-    <button id="appendField" class="addFieldBtn btn btn-outline-secondary" data-type="text" data-label="email" type="button">Email Id</button>
-    <button id="appendField" class="addFieldBtn btn btn-outline-secondary" data-type="number" data-label="Phone No." type="button">Phone No.</button>
-  </div>
-<!-- </div> -->
+ 
   <div id="build-wrap"></div>
 <script>
 
+jQuery(document).ready(function($) {
+  var fbEditor = document.getElementById('build-wrap'),
+    options = {
+      dataType: 'json',
+      disableFields: ['autocomplete', 'hidden'],
+      inputSets: [{
+        label: 'ExpoSim<> Input',
+        name: 'user-details',
+        fields: [{
+          type: 'text',
+          label: 'first_name',
+          className: 'form-control'
+        },
+        {
+          type: 'text',
+          label: 'last_name',
+          className: 'form-control'
+        },
+        {
+          type: 'text',
+          label: 'Company',
+          className: 'form-control'
+        },
+        {
+          type: 'text',
+          label: 'Email Id',
+          className: 'form-control'
+        },
+        {
+          type: 'number',
+          label: 'Phone No.',
+          className: 'form-control'
+        }]
+      }],
 
-jQuery(function($) {
-  var fbEditor = document.getElementById('build-wrap');
-  var options = {
-    controlPosition: 'left',
-      disabledAttrs: ["name","access","maxlength","className","description","max","min","subtype"]
-  };
-  var formBuilder = $(fbEditor).formBuilder(options);
+      controlOrder: [
+        'user-details'
+      ],
 
-  var buttons = document.getElementsByClassName('addFieldBtn');
-  
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].onclick = function() {
-      var field = {
-          type: this.dataset.type,
-          class: 'form-control',
-          label: this.dataset.label 
-          
-        };
-        var index = this.dataset.index ? Number(this.dataset.index) : undefined;
-
-      formBuilder.actions.addField(field, index);
-      
+      disabledAttrs: ['access',
+  'className',
+  'description',
+  'inline',
+  'label',
+  'max',
+  'maxlength',
+  'min',
+  'multiple',
+  'name',
+  'options',
+  'other']
     };
-  }
-
-  
-  
-
+  $(fbEditor).formBuilder(options);
 });
-
 
  </script> 
 
