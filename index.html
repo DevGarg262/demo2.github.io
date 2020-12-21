@@ -12,12 +12,24 @@
     <script src="https://formbuilder.online/assets/js/form-render.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
- <script src="./main.js"></script>
+    
+    <!-- <script src="./main.js"></script> -->
 </head>
 <body>
- 
+  <!-- <div class="buttons"> 
+  <div class="addFieldWrap" style="display: inline-grid; width: 350px;">
+    <button id="prependField" class="addFieldBtn" data-label="first_name" data-index="0" type="button">First Name</button>
+   <button id="appendField" class="addFieldBtn btn btn-outline-secondary" data-type="text" data-label="first_name" type="button">First Name</button> 
+    <button id="appendField" class="addFieldBtn btn btn-outline-secondary" data-type="text" data-label="last_name" type="button">Last Name</button>
+    <button id="appendField" class="addFieldBtn btn btn-outline-secondary" data-type="text" data-label="Company" type="button">Company</button>
+    <button id="appendField" class="addFieldBtn btn btn-outline-secondary" data-type="text" data-label="email" type="button">Email Id</button>
+    <button id="appendField" class="addFieldBtn btn btn-outline-secondary" data-type="number" data-label="Phone No." type="button">Phone No.</button>
+  </div> 
+ </div> -->
   <div id="build-wrap"></div>
+  
 <script>
+
 
 // jQuery(document).ready(function($) {
 //   var fbEditor = document.getElementById('build-wrap'),
@@ -27,6 +39,8 @@
 //       inputSets: [{
 //         label: 'ExpoSim<> Input',
 //         name: 'user-details',
+        
+//         // showHeader: true, // optional
 //         fields: [{
 //           type: 'text',
 //           label: 'first_name',
@@ -54,7 +68,9 @@
 //         }]
 //       }],
 
+
 //       controlOrder: [
+        
 //         'user-details'
 //       ],
 
@@ -70,11 +86,184 @@
 //   'name',
 //   'options',
 //   'other']
+
 //     };
 //   $(fbEditor).formBuilder(options);
 // });
 
- </script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// jQuery(function($) {
+//   var fbEditor = document.getElementById('build-wrap');
+//   var options = {
+//     controlPosition: 'left',
+//     disabledAttrs: ["name","access","maxlength","className","description","max","min","subtype"]
+//   };
+//   var formBuilder = $(fbEditor).formBuilder(options);
+
+//   var buttons = document.getElementsByClassName('addFieldBtn');
+  
+//   for (var i = 0; i < buttons.length; i++) {
+//     buttons[i].onclick = function() {
+//       var field = {
+//           type: this.dataset.type,
+//           class: 'form-control',
+//           label: this.dataset.label 
+          
+//         };
+//         var index = this.dataset.index ? Number(this.dataset.index) : undefined;
+
+//       formBuilder.actions.addField(field, index);
+      
+//     };
+//   }
+
+  
+  
+
+// });
+
+
+
+
+
+ jQuery(function($) {
+  var container = document.getElementById("build-wrap");
+  var options = {
+   
+    defaultFields: [
+  {
+    "type": "text",
+    "required": true,
+    "label": "first_name",
+    "placeholder": "First Name",
+    "className": "form-control",
+    "name": "text-1607759239587"
+  },
+  {
+    "type": "text",
+    "required": true,
+    "label": "TOC",
+    "placeholder": "toc",
+    "className": "form-control",
+    "name": "email_id"
+  },
+  {
+    "type": "number",
+    "required": true,
+    "label": "Phone Number",
+    "placeholder": "Your answer",
+    "className": "form-control",
+    "name": "number-1607759261543"
+  },
+  {
+    "type": "text",
+    "required": true,
+    "label": "Email",
+    "placeholder": "Your answer",
+    "className": "form-control",
+    "name": "text-1607759248785"
+  },
+  {
+    "type": "button",
+    "label": "Download Brochure",
+    "className": "btn-success btn",
+    "name": "button-1607759407680",
+    "style": "success"
+  }
+],
+
+    disabledAttrs: ["name","access","maxlength","className","description","max","min","subtype"],
+    
+    // inputSets: [{
+    //     label: 'ExpoSim<> Input',
+    //     name: 'user-details',
+        
+        // showHeader: true, // optional
+        fields: [
+        {
+          type: 'text',
+          label: 'last_name',
+          name: 'lastname',
+          className: 'form-control'
+        },
+        {
+          type: 'text',
+          label: 'Company',
+          className: 'form-control'
+        },
+        {
+          type: 'text',
+          label: 'Interested_in',
+          className: 'form-control'
+        },
+        {
+          type: 'text',
+          label: 'password',
+          name:'password',
+          className: 'form-control'
+        },
+        {
+          type: 'text',
+          label: 'country',
+          name: 'country',
+          className: 'form-control'
+        }],
+      // }],
+
+      disableFields: ['autocomplete', 'hidden','paragraph','header','select','radio-group','checkbox-group'],
+
+      controlOrder: [
+    
+      ],
+    
+    
+    
+  };
+  $(container).formBuilder(options);
+});
+
+
+
+
+
+
+
+
+
+
+
+    
+</script>
+
+
+
+
+
+ 
 
 
 </body>
