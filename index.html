@@ -12,67 +12,67 @@
     <script src="https://formbuilder.online/assets/js/form-render.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
- 
+ <script src="./main.js"></script>
 </head>
 <body>
  
   <div id="build-wrap"></div>
 <script>
 
-jQuery(document).ready(function($) {
-  var fbEditor = document.getElementById('build-wrap'),
-    options = {
-      dataType: 'json',
-      disableFields: ['autocomplete', 'hidden'],
-      inputSets: [{
-        label: 'ExpoSim<> Input',
-        name: 'user-details',
-        fields: [{
-          type: 'text',
-          label: 'first_name',
-          className: 'form-control'
-        },
-        {
-          type: 'text',
-          label: 'last_name',
-          className: 'form-control'
-        },
-        {
-          type: 'text',
-          label: 'Company',
-          className: 'form-control'
-        },
-        {
-          type: 'text',
-          label: 'Email Id',
-          className: 'form-control'
-        },
-        {
-          type: 'number',
-          label: 'Phone No.',
-          className: 'form-control'
-        }]
-      }],
+// jQuery(document).ready(function($) {
+//   var fbEditor = document.getElementById('build-wrap'),
+//     options = {
+//       dataType: 'json',
+//       disableFields: ['autocomplete', 'hidden'],
+//       inputSets: [{
+//         label: 'ExpoSim<> Input',
+//         name: 'user-details',
+//         fields: [{
+//           type: 'text',
+//           label: 'first_name',
+//           className: 'form-control'
+//         },
+//         {
+//           type: 'text',
+//           label: 'last_name',
+//           className: 'form-control'
+//         },
+//         {
+//           type: 'text',
+//           label: 'Company',
+//           className: 'form-control'
+//         },
+//         {
+//           type: 'text',
+//           label: 'Email Id',
+//           className: 'form-control'
+//         },
+//         {
+//           type: 'number',
+//           label: 'Phone No.',
+//           className: 'form-control'
+//         }]
+//       }],
 
-      controlOrder: [
-        'user-details'
-      ],
+//       controlOrder: [
+//         'user-details'
+//       ],
 
-      disabledAttrs: ['access',
-  'className',
-  'description',
-  'inline',
-  'label',
-  'max',
-  'maxlength',
-  'min',
-  'multiple',
-  'name',
-  'options',
-  'other']
-    };
-  $(fbEditor).formBuilder(options);
-});
+//       disabledAttrs: ['access',
+//   'className',
+//   'description',
+//   'inline',
+//   'label',
+//   'max',
+//   'maxlength',
+//   'min',
+//   'multiple',
+//   'name',
+//   'options',
+//   'other']
+//     };
+//   $(fbEditor).formBuilder(options);
+// });
 
  </script> 
 
