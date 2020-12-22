@@ -186,10 +186,11 @@
     "placeholder": "Your answer",
     "className": "form-control",
     "name": "text-1607759248785"
+    
   },
   {
     "type": "button",
-    "label": "Submit",
+    "label": "Download Brochure",
     "className": "btn-success btn",
     "name": "button-1607759407680",
     "style": "success"
@@ -197,7 +198,11 @@
 ],
 
     disabledAttrs: ["name","access","maxlength","className","description","max","min","subtype"],
-    
+    disabledFieldButtons: {
+    text: ['remove'], // disables the remove butotn for text fields
+    number: ['remove'] // disables the edit button for select fields
+  },
+
     // inputSets: [{
     //     label: 'ExpoSim<> Input',
     //     name: 'user-details',
@@ -237,7 +242,7 @@
       disableFields: ['autocomplete', 'hidden','paragraph','header','select','radio-group','checkbox-group'],
 
       controlOrder: [
-    
+    'button','number','file','textarea','date'
       ],
     
     
