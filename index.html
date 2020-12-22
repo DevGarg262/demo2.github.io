@@ -84,7 +84,7 @@
 //   'min',
 //   'multiple',
 //   'name',
-//   'options',
+//   'options','required'
 //   'other']
 
 //     };
@@ -197,7 +197,7 @@
   }
 ],
 
-    disabledAttrs: ["name","access","maxlength","className","description","max","min","subtype"],
+    disabledAttrs: ["name","access","maxlength","className","description","max","min","subtype","required"],
     disabledFieldButtons: {
     text: ['remove'], // disables the remove butotn for text fields
     number: ['remove'] // disables the edit button for select fields
@@ -239,10 +239,10 @@
         }],
       // }],
 
-      disableFields: ['autocomplete', 'hidden','paragraph','header','select','radio-group','checkbox-group'],
+      disableFields: ['autocomplete', 'text','hidden','paragraph','header','select','radio-group','checkbox-group'],
 
       controlOrder: [
-    'button','number','file','textarea','date'
+    
       ],
     
     
